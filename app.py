@@ -22,5 +22,13 @@ def favorite_dessert(users_dessert):
 def madlibs(adjective, noun):
     return f'One day, a {adjective} {noun} decided to enter a karaoke contest at the park. It sang so loudly, even the squirrels joined in!'
 
+@app.route('/multiply/<number1>/<number2>')
+def multiply(number1, number2):
+    if number1.isdigit() and number2.isdigit():
+        result = int(number1) * int(number2)
+        return f'{number1} times {number2} is {result}'
+    else:
+        return 'Invalid inputs. Please try again by entering 2 numbers!'  
+
 if __name__ == '__main__':
     app.run(debug=True)
