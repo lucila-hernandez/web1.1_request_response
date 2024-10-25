@@ -1,8 +1,5 @@
-
-# TODO: Follow the assignment instructions to complete the required routes!
-# (And make sure to delete this TODO message when you're done!)
-
 from flask import Flask
+import random
 
 app = Flask(__name__)
 
@@ -38,6 +35,15 @@ def sayntimes(word, n):
         return repeat_str.strip()
     else:
         return 'Invalid input. Please try again by entering a word and a number!'
+
+@app.route('/dicegame')
+def dicegame():
+    random_number = random.randint(1, 6)
+    if random_number == 6:
+        result = f'You rolled a {random_number}. You won!'
+    else:
+        result = f'You rolled a {random_number}. You lost!'
+    return result
 
 if __name__ == '__main__':
     app.run(debug=True)
