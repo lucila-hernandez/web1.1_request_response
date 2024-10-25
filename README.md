@@ -1,3 +1,5 @@
-# Homework 1: Request/Response
+# Request/Response Challenge
 
-Follow the instructions [here](https://github.com/Tech-at-DU/ACS1710-Web-Architecture/blob/master/Assignments/01-Request-Response.md) to complete and submit this assignment.
+Completed all challenges
+
+
